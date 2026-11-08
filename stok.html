@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Buku - RynoBook Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>RynoBook Store</h2>
+
+        <nav>
+            <a href="dashboard.html">Beranda</a>
+            <a href="stok.html">Katalog Buku</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="tracking.html">Tracking</a>
+            <button onclick="logout()">Keluar</button>
+        </nav>
+    </header>
+
+    <main class="stok-page">
+
+        <h1>Katalog dan Manajemen Stok Buku</h1>
+        <p>Kelola koleksi buku RynoBook Store.</p>
+
+        <div class="stok-summary">
+            <div class="summary-card">
+                <h3 id="totalBuku">0</h3>
+                <p>Jenis Buku</p>
+            </div>
+
+            <div class="summary-card">
+                <h3 id="totalStok">0</h3>
+                <p>Total Stok</p>
+            </div>
+        </div>
+
+        <section class="stok-form">
+            <h2>Tambah Buku Baru</h2>
+
+            <form id="bookForm">
+
+                <input
+                    type="text"
+                    id="judul"
+                    placeholder="Judul buku"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="penulis"
+                    placeholder="Nama penulis"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="harga"
+                    placeholder="Harga buku"
+                    min="1"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="stok"
+                    placeholder="Jumlah stok"
+                    min="0"
+                    required
+                >
+
+                <button type="submit">Tambah Buku</button>
+
+            </form>
+        </section>
+
+        <section class="stok-list">
+
+            <h2>Daftar Buku</h2>
+
+            <input
+                type="text"
+                id="searchBook"
+                placeholder="Cari judul buku..."
+            >
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Judul Buku</th>
+                            <th>Penulis</th>
+                            <th>Harga</th>
+                            <th>Stok</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bookTable">
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - RynoBook Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>RynoBook Store</h2>
+
+        <nav>
+            <a href="dashboard.html">Beranda</a>
+            <a href="stok.html">Katalog Buku</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="tracking.html">Tracking</a>
+            <button onclick="logout()">Keluar</button>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+
+        <section class="welcome">
+            <h1 id="greeting">Selamat Datang!</h1>
+            <p id="userName">Selamat berbelanja di RynoBook Store.</p>
+        </section>
+
+        <section class="dashboard-content">
+
+            <h2>Menu Utama</h2>
+
+            <div class="menu-container">
+
+                <div class="menu-card">
+                    <h3>📚 Katalog Buku</h3>
+                    <p>Lihat berbagai koleksi buku kami.</p>
+                    <a href="stok.html">Lihat Buku</a>
+                </div>
+
+                <div class="menu-card">
+                    <h3>📦 Stok Buku</h3>
+                    <p>Lihat dan kelola persediaan buku.</p>
+                    <a href="stok.html">Kelola Stok</a>
+                </div>
+
+                <div class="menu-card">
+                    <h3>🛒 Checkout</h3>
+                    <p>Lakukan pemesanan buku pilihanmu.</p>
+                    <a href="checkout.html">Pesan Sekarang</a>
+                </div>
+
+                <div class="menu-card">
+                    <h3>🚚 Tracking</h3>
+                    <p>Pantau status pengiriman pesanan.</p>
+                    <a href="tracking.html">Lacak Pesanan</a>
+                </div>
+
+            </div>
+
+        </section>
+<section class="dashboard-history" style="margin-top: 30px; padding: 0 20px;">
+  <h2>Riwayat Transaksi</h2>
+  <div id="riwayatPesanan"></div>
+</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 RynoBook Store. All Rights Reserved.</p>
+    </footer>
+    <!-- POP-UP BERANDA -->
+<div id="welcomeModal" class="modal-overlay">
+  <div class="modal-box">
+    <span id="closeModal" class="modal-close">&times;</span>
+    <h2>Selamat Datang di RynoBook Store!</h2>
+    <p>Temukan koleksi buku terbaik dan cek promo menarik hari ini.</p>
+    <a href="stok.html" class="modal-btn">Lihat Katalog Buku</a>
+  </div>
+</div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

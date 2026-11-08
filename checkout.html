@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - RynoBook Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>RynoBook Store</h2>
+        <nav>
+            <a href="dashboard.html">Beranda</a>
+            <a href="stok.html">Katalog Buku</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="tracking.html">Tracking</a>
+            <button onclick="logout()">Keluar</button>
+        </nav>
+    </header>
+
+    <main class="checkout-page">
+
+        <h1>Checkout Pesanan</h1>
+        <p>Pesan buku favoritmu di RynoBook Store.</p>
+
+        <section class="checkout-card">
+            <h2>Pilih Buku</h2>
+
+            <form id="cartForm">
+
+                <label for="pilihBuku">Judul Buku</label>
+                <select id="pilihBuku" required>
+                    <option value="">Pilih buku</option>
+                </select>
+
+                <label for="jumlahBeli">Jumlah Pembelian</label>
+                <input
+                    type="number"
+                    id="jumlahBeli"
+                    min="1"
+                    value="1"
+                    required
+                >
+
+                <button type="submit">Tambah ke Keranjang</button>
+            </form>
+        </section>
+
+        <section class="checkout-card">
+            <h2>Keranjang Belanja</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Buku</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Subtotal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartTable"></tbody>
+                </table>
+            </div>
+
+            <h3 class="total-payment">
+                Total: <span id="totalHarga">Rp 0</span>
+            </h3>
+        </section>
+
+        <section class="checkout-card">
+            <h2>Informasi Pengiriman</h2>
+
+            <form id="checkoutForm">
+
+                <label for="namaPembeli">Nama Penerima</label>
+                <input type="text" id="namaPembeli" required>
+
+                <label for="alamat">Alamat Lengkap</label>
+                <textarea id="alamat" rows="4" required></textarea>
+
+                <label for="metodeBayar">Metode Pembayaran</label>
+                <select id="metodeBayar" required>
+                    <option value="">Pilih pembayaran</option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                    <option value="COD">COD</option>
+                    <option value="E-Wallet">E-Wallet</option>
+                </select>
+
+                <button type="submit">Buat Pesanan</button>
+
+            </form>
+        </section>
+
+        <div id="orderResult"></div>
+
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

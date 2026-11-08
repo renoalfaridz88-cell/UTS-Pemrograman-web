@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking Pesanan - RynoBook Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sesuaikan navbar dengan halaman HTML Anda lainnya -->
+  <nav class="navbar">
+    <a href="dashboard.html">Beranda</a>
+    <a href="stok.html">Katalog Buku</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="tracking.html">Tracking</a>
+  </nav>
+
+  <main class="container">
+    <h2>Lacak Pesanan</h2>
+
+    <form id="trackingForm">
+      <label for="nomorPesanan">Nomor Pesanan</label>
+      <input type="text" id="nomorPesanan" placeholder="Masukkan nomor pesanan" required>
+      <button type="submit">Lacak Pesanan</button>
+    </form>
+    
+    <div id="hasilCheckout"></div>
+    <div id="hasilTracking"></div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
