@@ -82,3 +82,9 @@ RynoBook-Store/
 
 ### 7. History Transaksi
 ![History](docs/screenshots/history.png)
+
+## 8. Video Presentasi
+
+Video presentasi project RynoBook Store dapat dilihat melalui link berikut:
+
+[Klik di sini untuk menonton Video Presentasi RynoBook Store](https://youtu.be/JMX2OOsa_A8)
